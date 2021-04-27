@@ -40,14 +40,14 @@ jobs:
 
   run-linters:
     runs-on: ubuntu-latest
-     defaults:
+    defaults:
       run:
         working-directory: client
 
     strategy:
       matrix:
         node-version: [14.x]
-        
+
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v2
