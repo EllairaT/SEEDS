@@ -34,3 +34,6 @@ jobs:
 
       - name: Run lint
         run: npm run lint
+
+      - name: Start Server
+        run: npm run app
