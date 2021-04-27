@@ -35,34 +35,8 @@ jobs:
       - name: Run the tests
         run: npm test
 
+      -name: Run Eslint
+        run: eslint . --ext .ts,.tsx
+
       - name: Build
         run: npm run build
-
-  run-linters:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: client
-
-    strategy:
-      matrix:
-        node-version: [14.x]
-
-    steps:
-      - name: Check out Git repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Install Node.js dependencies
-        run: npm ci
-
-      - name: Lint Action
-        uses: wearerequired/lint-action@v1.9.0
-
-        with:
-          eslint: true
-          prettier: true
