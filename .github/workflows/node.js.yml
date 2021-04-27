@@ -58,17 +58,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install Node.js dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Install Eslint
-        run: npm install eslint
+      - name: Lint Action
+        uses: wearerequired/lint-action@v1.9.0
 
-      - name: Install prettier
-        run: npm install prettier
-
-      - name: Run linters
-        uses: samuelmeuli/lint-action@v1
         with:
-          github_token: ${{ secrets.github_token }}
           eslint: true
           prettier: true
