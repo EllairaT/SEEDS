@@ -36,7 +36,7 @@
     "lint": "eslint ."
   },
   "eslintIgnore": [
-    "seeds_client_app/build/static/js/*"
+    "seeds_client_app/build/static/js"
   ],
   "browserslist": {
     "production": [
