@@ -29,15 +29,12 @@
     "client": "cd seeds_app_client && npm start",
     "build": "cd seeds_app_client && npm run build",
     "dev": "concurrently -n 'server,client' -c 'red,green'  \"nodemon server.js\" \"npm run client\"",
-    "install-client": "cd seeds_app_client && npm install",
-    "heroku-postbuild": "npm run install-client && npm install --only=dev --no-shrinkwrap && npm run build",
+    "install-client": "cd seeds_app_client && npm install && npm run build",
+    "heroku-postbuild": "npm run install-client && npm install --only=dev --no-shrinkwrap",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint ."
   },
-  "eslintIgnore": [
-    "seeds_client_app/build/static/js"
-  ],
   "browserslist": {
     "production": [
       ">0.2%",
