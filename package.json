@@ -35,6 +35,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint ."
   },
+  "eslintIgnore": [
+    "build/static/js/*"
+  ],
   "browserslist": {
     "production": [
       ">0.2%",
