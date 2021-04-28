@@ -8,6 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Button>Test</Button>
+        <Button>Test</Button>
         <p>THE FUTURE SEEDS APP STARTS HERE?.</p>
       </header>
     </div>
