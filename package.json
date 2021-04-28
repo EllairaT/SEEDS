@@ -24,13 +24,13 @@
     "node": "14.x"
   },
   "scripts": {
-    "server": "nodemon server.js",
-    "build": "cd seeds_app_client && npm run build",
-    "install-client": "cd seeds_app_client && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build",
     "start": "node server.js",
+    "server": "nodemon server.js",
     "client": "cd seeds_app_client && npm start",
+    "build": "cd seeds_app_client && npm run build",
     "dev": "concurrently -n 'server,client' -c 'red,green'  \"nodemon server.js\" \"npm run client\"",
+    "install-client": "cd seeds_app_client && npm install",
+    "heroku-postbuild": "npm run install-client && npm install --only=dev --no-shrinkwrap && npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint ."
