@@ -25,6 +25,9 @@
       "react-app"
     ]
   },
+  "eslintIgnore": [
+    "build/static/js/*"
+  ],
   "browserslist": {
     "production": [
       ">0.2%",
