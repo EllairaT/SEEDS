@@ -1,16 +1,21 @@
+import React from 'react'
 import logo from './logo.svg'
 import './App.css'
+import Login from './Login'
+import Home from './Home'
+import { Route, Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
+import Navbar from './Navbar'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Button>Test</Button>
-        <Button>Test</Button>
-        <p>THE FUTURE SEEDS APP STARTS HERE?.</p>
-      </header>
+      <Navbar />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/Login" component={Login} />
+
+      <p>THE FUTURE SEEDS APP STARTS HERE?.</p>
+
     </div>
   )
 }
