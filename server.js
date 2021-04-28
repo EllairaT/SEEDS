@@ -12,12 +12,9 @@ app.get('/', (req, res) => res.send('Hello world!'))
 
 const port = process.env.PORT || 8000
 
-// ... other app.use middleware
-app.use(express.static(path.join(__dirname, 'seeds_app_client', 'build')))
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'seeds_app_client', 'build', 'index.html'))
-})
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('seeds_app_client/build'))
+}
 
 app.listen(port, () => {
   console.log(`App is running on port ${port}`)
