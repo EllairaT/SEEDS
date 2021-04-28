@@ -10,7 +10,7 @@ connectDB()
 
 app.get('/', (req, res) => res.send('Hello world!'))
 
-const port = process.env.PORT || 8082
+const PORT = process.env.PORT || 3000
 
 // ... other app.use middleware
 app.use(express.static(path.join(__dirname, 'seeds_app_client', 'build')))
@@ -21,4 +21,6 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'seeds_app_client', 'build', 'index.html'))
 })
 
-app.listen(port, () => console.log(`Server running on port ${port}`))
+app.listen(PORT, () => {
+  console.log(`Our app is running on port ${PORT}`)
+})
