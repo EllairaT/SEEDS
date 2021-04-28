@@ -12,7 +12,7 @@ app.get('/', (req, res) => res.send('Hello world!'))
 const port = process.env.PORT || 8000
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('seeds_app_client/build'))
+  app.use(express.static('client/build'))
 }
 
 app.listen(port, () => {

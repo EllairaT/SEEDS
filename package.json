@@ -2,6 +2,7 @@
   "name": "seeds-app",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
@@ -24,14 +25,9 @@
     "node": "14.x"
   },
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "server": "nodemon server.js",
-    "client": "cd seeds_app_client && npm start",
-    "build": "cd seeds_app_client && npm run build",
-    "dev": "concurrently -n 'server,client' -c 'red,green'  \"nodemon server.js\" \"npm run client\"",
-    "install-client": "cd seeds_app_client && npm install && npm run build",
-    "heroku-postbuild": "npm run install-client && npm install --only=dev --no-shrinkwrap",
-    "test": "react-scripts test",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client",
     "eject": "react-scripts eject",
     "lint": "eslint ."
   },
