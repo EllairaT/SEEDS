@@ -5,15 +5,14 @@ const connectDB = require('./config/db')
 
 const app = express()
 
+const port = process.env.PORT || 5000
 // Connect Database
 connectDB()
 
 app.get('/', (req, res) => res.send('Hello world!'))
 
-const port = process.env.PORT || 5000
-
 if (process.env.NODE_ENV === 'production') {
-  app.use('*', express.static(path.join(__dirname, 'client', 'build')))
+  app.use('*', express.static(path.join(__dirname, 'client', 'build', 'index.html')))
 }
 
 app.listen(port, () => {
