@@ -1,9 +1,9 @@
 import React from 'react'
 import './App.css'
-import Login from './Login'
-import Home from './Home'
+import Login from './pages/Login'
+import Home from './pages/Home'
 import { Route } from 'react-router-dom'
-import Navbar from './Navbar'
+import Navbar from './components/Navbar'
 
 function App() {
   return (
@@ -13,7 +13,6 @@ function App() {
       <Route exact path="/Login" component={Login} />
 
       <p>THE FUTURE SEEDS APP STARTS HERE?.</p>
-
     </div>
   )
 }
