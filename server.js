@@ -17,7 +17,7 @@ app.use(express.static('client/build'))
 app.use('/api', routes)
 // routes
 app.get('/', (req, res) => {
-  res.send('Hello from MERN')
+  res.send('Server is running!')
 })
 
 app.use((req, res) => {
