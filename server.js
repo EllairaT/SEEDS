@@ -1,5 +1,6 @@
 // server.js
 const express = require('express')
+const dotenv = require('dotenv')
 
 const app = express()
 const path = require('path')
@@ -7,7 +8,7 @@ const connectDB = require('./config/db')
 const authRoute = require('./routes/auth')
 
 const PORT = process.env.PORT || 5000
-
+dotenv.config()
 connectDB()
 
 // configure body parser for AJAX requests
