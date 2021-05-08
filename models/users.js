@@ -5,15 +5,31 @@ const { Schema } = mongoose
 
 // for security reasons, passwords will not be stored. Instead, the hash and salt will be stored.
 const UserSchema = new Schema({
-  name: String,
-  password: String,
-  email: String,
-  hash: String,
-  salt: String,
-  userType: String,
-  loginInfo: {
-    userCreated: Date,
-    lastLogin: Date
+  name: {
+    type: String,
+    required: true,
+    min: 3,
+    max: 50
+  },
+  email: {
+    type: String,
+    required: true,
+    min: 6,
+    max: 50
+  },
+  userType: {
+    type: String,
+    required: true
+  },
+  password: {
+    type: String,
+    required: true,
+    min: 10
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+    lastlogin: Date
   }
 })
 

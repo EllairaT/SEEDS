@@ -4,27 +4,32 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const connectDB = require('./config/db')
-const routes = require('./routes/api')
+const authRoute = require('./routes/auth')
 
 const PORT = process.env.PORT || 5000
 
 connectDB()
+
 // configure body parser for AJAX requests
 app.use(express.urlencoded({ extended: true }))
+// Middleware
 app.use(express.json())
 
-app.use(express.static('client/build'))
-app.use('/api', routes)
-// routes
+// Routes
 app.get('/', (req, res) => {
   res.send('Server is running!')
 })
 
+// Route middleware
+app.use('/api/user', authRoute)
+
+// Route client build
+app.use(express.static('client/build'))
 app.use((req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'))
 })
 
-// Bootstrap server
+// Start server
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}.`)
 })
