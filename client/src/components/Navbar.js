@@ -1,30 +1,32 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Route } from 'react-router-dom'
+// Import pages
 import Login from '../pages/Login'
 import Home from '../pages/Home'
 import Register from '../pages/Register'
+// Import bootstrap components
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
 
-function Navbar() {
+function NavBar() {
   return (
-    <div class="navbar">
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/Login">Login</Link>
-        </li>
-        <li>
-          <Link to="/Register">Register</Link>
-        </li>
-      </ul>
+    <>
+      <Navbar bg="dark" variant="dark">
+        <Navbar.Brand href="/">SEEDS</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Nav className="mr-auto">
+          <Nav.Link href="/Home">Home</Nav.Link>
+          <Nav.Link href="/Login">Login</Nav.Link>
+          <Nav.Link href="/Register">Register</Nav.Link>
+        </Nav>
+      </Navbar>
 
-      <Route exact path="/" component={Home} />
+      <Route exact path="/Home" component={Home} />
       <Route exact path="/Login" component={Login} />
       <Route exact path="/Register" component={Register} />
-    </div>
+    </>
   )
 }
 
-export default Navbar
+export default NavBar

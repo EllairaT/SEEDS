@@ -1,0 +1,13 @@
+// overwrite theme variables
+
+$primary: #232e34;
+$secondary: #397779;
+$dark: #161d20;
+$light: #79a87f;
+$success: #66ab57;
+$info: #9ab6da;
+$warning: #e49b1f;
+$danger: #f44336;
+
+// import bootstrap styles at the bottom!
+@import '~bootstrap/scss/bootstrap.scss';

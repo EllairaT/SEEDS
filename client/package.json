@@ -12,6 +12,7 @@
     "bibtex-parse-js": "0.0.24",
     "bootstrap": "^4.6.0",
     "mongodb-client-encryption": "^1.2.3",
+    "node-sass": "^4.14.1",
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.2",

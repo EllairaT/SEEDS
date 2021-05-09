@@ -1,11 +1,11 @@
 import React from 'react'
+import { NameInput } from '../components/InputForms'
 
 function Register() {
   return (
     <div className="Register">
-      <header className="Register-header">
-        <div>This is the Register page</div>
-      </header>
+      <header className="Register-header"></header>
+      <NameInput />
     </div>
   )
 }
