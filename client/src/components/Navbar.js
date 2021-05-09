@@ -11,7 +11,7 @@ import Navbar from 'react-bootstrap/Navbar'
 function NavBar() {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar className="navbar-dark bg-dark p-3" variant="dark">
         <Navbar.Brand href="/">SEEDS</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Nav className="mr-auto">

@@ -1,11 +1,16 @@
 import React from 'react'
-import { NameInput } from '../components/InputForms'
+import { NameInput, EmailInput, PasswordInput } from '../components/InputForms'
+import InputGroup from 'react-bootstrap/InputGroup'
 
 function Register() {
   return (
     <div className="Register">
       <header className="Register-header"></header>
-      <NameInput />
+      <InputGroup>
+        <NameInput />
+        <EmailInput />
+        <PasswordInput />
+      </InputGroup>
     </div>
   )
 }

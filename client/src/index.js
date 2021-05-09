@@ -1,11 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './css/index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './css/customColors.scss'
+import 'bootswatch/dist/darkly/bootstrap.min.css'
+import './style/index.css'
 
 ReactDOM.render(
   <React.StrictMode>
