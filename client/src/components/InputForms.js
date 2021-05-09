@@ -26,7 +26,7 @@ export function EmailInput(props) {
   const [email, setEmail] = useState('example@email.com')
   const onChange = (event) => setEmail(event.target.value)
   const handleSubmit = (evt) => {
-    evt.preventDefault() //prevent default behavior, in this case entering data when 'enter' is pressed
+    evt.preventDefault()
   }
 
   return (
@@ -44,7 +44,7 @@ export function PasswordInput(props) {
   const [password, setPassword] = useState('')
   const onChange = (event) => setPassword(event.target.value)
   const handleSubmit = (evt) => {
-    evt.preventDefault() //prevent default behavior, in this case entering data when 'enter' is pressed
+    evt.preventDefault()
   }
 
   return (
