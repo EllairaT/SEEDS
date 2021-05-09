@@ -9,10 +9,12 @@ const authRoute = require('./routes/auth')
 
 const PORT = process.env.PORT || 5000
 dotenv.config()
+
 connectDB()
 
 // configure body parser for AJAX requests
 app.use(express.urlencoded({ extended: true }))
+
 // Middleware
 app.use(express.json())
 
