@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { Route } from 'react-router-dom'
 // Import pages
 import Login from '../pages/Login'
