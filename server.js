@@ -7,7 +7,7 @@ const path = require('path')
 const connectDB = require('./config/db')
 const authRoute = require('./routes/auth')
 
-const PORT = process.env.PORT || 5000
+const { PORT } = process.env
 dotenv.config()
 
 connectDB()
@@ -27,11 +27,13 @@ app.get('/', (req, res) => {
 app.use('/api/user', authRoute)
 
 // Route client build
-app.use(express.static('client/build'))
-app.use((req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'))
-})
+if (['production'].includes(process.env.NODE_ENV)) {
+  app.use(express.static('client/build'))
 
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve('client', 'build', 'index.html'))
+  })
+}
 // Start server
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}.`)
