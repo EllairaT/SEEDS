@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
-import FacebookLogin from 'react-facebook-login'
+// import FacebookLogin from 'react-facebook-login'
+import '../style/login.css'
+import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
+import Button from 'react-bootstrap/Button'
+import * as Icon from 'react-bootstrap-icons'
 
 export default class Facebook extends Component {
   state = {
@@ -24,6 +28,10 @@ export default class Facebook extends Component {
     console.log('Facebook btn clicked')
   }
 
+  handleFailure = () => {
+    console.log('failed to login')
+  }
+
   render() {
     let fbCont
 
@@ -39,14 +47,21 @@ export default class Facebook extends Component {
       fbCont = (
         <FacebookLogin
           appId="203256658124872"
-          autoLoad={true}
+          autoLoad={false}
+          render={(renderProps) => (
+            <Button onClick={renderProps.onClick} className="Facebook" style={{ background: '#4267b2' }}>
+              <Icon.Facebook className="mx-2" />
+              Continue with Facebook
+            </Button>
+          )}
           fields="name,email,picture"
           onClick={this.componentClicked}
+          onFailure={this.handleFailure}
           callback={this.responseFacebook}
         />
       )
     }
 
-    return <div>{fbCont}</div>
+    return <>{fbCont}</>
   }
 }
