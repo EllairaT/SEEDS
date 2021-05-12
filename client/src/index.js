@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from 'react-router-dom'
-import 'bootswatch/dist/darkly/bootstrap.min.css'
+import 'bootswatch/dist/minty/bootstrap.min.css'
 import './style/index.css'
 
 ReactDOM.render(

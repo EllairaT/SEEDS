@@ -25,6 +25,8 @@ app.get('/', (req, res) => {
 
 // Route middleware
 app.use('/api/user', authRoute)
+app.use('/api/user/facebookauth/')
+app.use('/api/user/googleauth/')
 
 // Route client build
 if (['production'].includes(process.env.NODE_ENV)) {
