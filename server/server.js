@@ -1,15 +1,18 @@
 // server.js
-const express = require('express')
-const dotenv = require('dotenv')
+import express from 'express'
+import bodyParser from 'body-parser'
+import mongoose from 'mongoose'
+import cors from 'cors'
+import path from 'path'
+
+import dotenv from 'dotenv'
+import connectDB from './config/db.js'
+import postRoutes from './routes/articles.js'
+import authRoute from './routes/auth.js'
+dotenv.config({ path: '../.env' })
 
 const app = express()
-const path = require('path')
-const connectDB = require('./config/db')
-const authRoute = require('./routes/auth')
-const postRoutes = require('./routes/posts')
-
-const PORT = 5000
-dotenv.config()
+const { PORT } = process.env
 
 connectDB()
 
@@ -26,7 +29,7 @@ app.get('/', (req, res) => {
 
 // Route middleware
 app.use('/auth', authRoute)
-app.use('/posts', postRoutes)
+app.use('/articles', postRoutes)
 
 // Route client build
 if (['production'].includes(process.env.NODE_ENV)) {

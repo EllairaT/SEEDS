@@ -15,10 +15,10 @@ function Login() {
         <Card style={{ width: '18rem', border: 0 }} className="mx-auto">
           <EmailInput />
           <PasswordInput />
-          <br />
+
           <Button> Log in</Button>
-          <br />
-          <span>---------or---------</span>
+
+          <span>or</span>
           <Facebook />
           <Google />
         </Card>

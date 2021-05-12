@@ -21,6 +21,18 @@
     "comma-dangle": ["error", "never"],
     "linebreak-style": ["error", "windows"],
     "no-unused-vars": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "import/no-anonymous-default-export": [
+      "error",
+      {
+        "allowArray": false,
+        "allowArrowFunction": false,
+        "allowAnonymousClass": true,
+        "allowAnonymousFunction": false,
+        "allowCallExpression": true, // The true value here is for backward compatibility
+        "allowLiteral": false,
+        "allowObject": false
+      }
+    ]
   }
 }

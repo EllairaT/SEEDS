@@ -71,6 +71,7 @@
   "main": "server.js",
   "keywords": [],
   "author": "",
+  "type": "module",
   "license": "MIT",
   "repository": {
     "type": "git",

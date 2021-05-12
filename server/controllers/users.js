@@ -1,11 +1,13 @@
-const router = require('express').Router()
-const bcrypt = require('bcryptjs')
-const jwt = require('jsonwebtoken')
-const User = require('../models/users')
-const { registerValidation, loginValidation } = require('../validation')
+import express from 'express'
+import bcrypt from 'bcryptjs'
+import jwt from 'jsonwebtoken'
+import User from '../models/users.js'
+import { registerValidation, loginValidation } from '../validation.js'
+
+const router = express.Router()
 
 // Register new user
-router.post('/register', async (req, res) => {
+export const loginUser = async (req, res) => {
   // Validate input
   const { error } = registerValidation(req.body)
   if (error) {
@@ -38,10 +40,10 @@ router.post('/register', async (req, res) => {
     res.status(400).send(err)
     return false
   }
-})
+}
 
 // Login for  existing user
-router.post('/login', async (req, res) => {
+export const registerUser = async (req, res) => {
   // Validate input
   const { error } = loginValidation(req.body)
   if (error) {
@@ -66,6 +68,4 @@ router.post('/login', async (req, res) => {
   res.header('auth-token', tkn).send(tkn)
 
   return true
-})
-
-module.exports = router
+}
