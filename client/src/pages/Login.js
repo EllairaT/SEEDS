@@ -6,8 +6,8 @@ function Login() {
     <div className="Login">
       <header className="Login-header">
         <div>This is the Login page</div>
-        <Facebook />
       </header>
+      <Facebook />
     </div>
   )
 }
