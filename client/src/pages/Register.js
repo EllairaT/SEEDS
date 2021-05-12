@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { NameInput, EmailInput, PasswordInput } from '../components/InputForms'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
@@ -7,7 +7,8 @@ import Facebook from '../components/Facebook'
 import Google from '../components/Google'
 import Form from 'react-bootstrap/Form'
 import { ActionCreators } from '../actions/users'
-// import '../../../server/validation'
+import { useDispatch, useSelector } from 'react-redux'
+
 function Register(props) {
   // const onChange = (event) => setPassword(event.target.value)
   const [state, setState] = useState({
@@ -18,22 +19,28 @@ function Register(props) {
     },
     submitted: false
   })
+  // const post = useSelector((state) => (currentId ? state.posts.find((message) => message._id === currentId) : null))
 
-  const submitForm = async (evt) => {
-    setState.submitted = true
-    props.dispatch(ActionCreators.register)
-    const user = state
+  // const dispatch = useDispatch()
+  // useEffect(() => {
+  //   if (post) setPostData(post)
+  // }, [post])
 
-    evt.preventDefault() //prevent user from entering data with enter
-  }
-
-  const handleSubmit = (evt) => {
+  const handleSubmit = async (evt) => {
     evt.preventDefault()
+
+    //   if (currentId === 0) {
+    //     dispatch(createPost(postData))
+    //     clear()
+    //   } else {
+    //     dispatch(updatePost(currentId, postData))
+    //     clear()
+    //   }
   }
   return (
     <div className="Register m-5">
       <h1>Register a new SEEDS account</h1>
-      <lead>Add to the rapidly growing repository of software engineering methods!</lead>
+      <span>Add to the rapidly growing repository of software engineering methods!</span>
 
       <Container className="p-5">
         <Card style={{ width: '20rem', border: 0 }} className="mx-auto">
@@ -46,7 +53,7 @@ function Register(props) {
             </Button>
           </Form>
           <br />
-          <lead>or</lead>
+          <span>or</span>
           <Facebook />
           <Google />
         </Card>

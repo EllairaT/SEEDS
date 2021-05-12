@@ -4,5 +4,5 @@ import axios from 'axios'
 const authUrl = 'http://localhost:5000/auth'
 const url = 'http://localhost:5000/articles'
 
-const login = () => axios.post()
+const login = () => axios.get(authUrl)
 const fetchArticles = () => axios.get(url)

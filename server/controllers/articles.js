@@ -1,4 +1,10 @@
 //handlers for routes
-export const getArticle = (req, res) => {
-  res.send('getting data')
+import Article from '../models/articles.js'
+
+export const getArticle = async (req, res) => {
+  try {
+    const getArticles = await Article.find()
+  } catch (err) {
+    console.log(err.message)
+  }
 }

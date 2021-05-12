@@ -10,4 +10,5 @@ const connectDB = async () => {
   }
 }
 
+mongoose.set('useFindAndModify', false)
 export default connectDB

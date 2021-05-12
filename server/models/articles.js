@@ -1,4 +1,4 @@
-import mongoose, { model } from 'mongoose'
+import mongoose from 'mongoose'
 
 // Schema
 const { Schema } = mongoose
@@ -10,6 +10,6 @@ const ArticleSchema = new Schema({
 })
 
 // Model
-const Article = model('Article', ArticleSchema)
+const Article = mongoose.model('Article', ArticleSchema)
 
 export default Article
