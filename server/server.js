@@ -4,7 +4,6 @@ import bodyParser from 'body-parser'
 import mongoose from 'mongoose'
 import cors from 'cors'
 import path from 'path'
-
 import dotenv from 'dotenv'
 import connectDB from './config/db.js'
 import postRoutes from './routes/articles.js'
@@ -18,7 +17,7 @@ connectDB()
 
 // configure body parser for AJAX requests
 app.use(express.urlencoded({ extended: true }))
-
+app.use(cors())
 // Middleware
 app.use(express.json())
 

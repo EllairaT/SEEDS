@@ -7,7 +7,7 @@ import Facebook from '../components/Facebook'
 import Google from '../components/Google'
 import Form from 'react-bootstrap/Form'
 import { ActionCreators } from '../actions/users'
-import '../../../server/validation'
+// import '../../../server/validation'
 function Register(props) {
   // const onChange = (event) => setPassword(event.target.value)
   const [state, setState] = useState({
