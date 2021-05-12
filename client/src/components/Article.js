@@ -1,12 +1,15 @@
-import React from 'react'
+import React, {Component} from 'react'
+import axios from 'axios'
 
-function ArticleObj() {
-  return (
-    <tr>
-      <td>cell for date</td>
-      <td>cell for author</td>
-    </tr>
-  )
+export default class ArticleObj extends Component{
+
+  
+  create(){
+
+  
+
+  }
+
+  render()
+
 }
-
-export default ArticleObj

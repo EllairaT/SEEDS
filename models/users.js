@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 // Schema
 const { Schema } = mongoose
 
+//
 // for security reasons, passwords will not be stored. Instead, the hash and salt will be stored.
 const UserSchema = new Schema({
   name: {
@@ -31,7 +32,7 @@ const UserSchema = new Schema({
     default: Date.now,
     lastlogin: Date
   }
-})
+}, { collection : 'users'})
 
 // Model
 const User = mongoose.model('User', UserSchema)

@@ -6,6 +6,7 @@ const app = express()
 const path = require('path')
 const connectDB = require('./config/db')
 const authRoute = require('./routes/auth')
+const articleRoute = require('./routes/article')
 
 const { PORT } = process.env
 dotenv.config()
@@ -25,6 +26,7 @@ app.get('/', (req, res) => {
 
 // Route middleware
 app.use('/api/user', authRoute)
+app.use('/api/user', articleRoute)
 app.use('/api/user/facebookauth/')
 app.use('/api/user/googleauth/')
 
