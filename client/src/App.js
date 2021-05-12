@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container'
 function App() {
   return (
     <>
-      <div className="App gray-700 text-light">
+      <div className="App text-light">
         <Container fluid="true">
           <NavBar />
           <small>SEEDS App created by: Ellaira, Jordan, StJohn</small>

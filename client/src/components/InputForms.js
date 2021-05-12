@@ -14,7 +14,7 @@ export function NameInput(props) {
   return (
     <Form onSubmit={handleSubmit}>
       <Form.Group controlId={props.controlId}>
-        <Form.Label className="float-left">Name</Form.Label>
+        <Form.Label className="form-text text-muted float-left">Name</Form.Label>
         <Form.Control type="text" value={name} ref={props.ref} placeholder="Enter Name" onChange={onChange} />
       </Form.Group>
     </Form>
@@ -32,8 +32,9 @@ export function EmailInput(props) {
   return (
     <Form onSubmit={handleSubmit}>
       <Form.Group controlId={props.controlId}>
-        <Form.Label className="float-left">Email</Form.Label>
+        <Form.Label className="form-text text-muted float-left">Email</Form.Label>
         <Form.Control type="email" value={email} ref={props.ref} placeholder="Enter Name" onChange={onChange} />
+        <small className="form-text text-muted"> We'll never share your email with anyone else.</small>
       </Form.Group>
     </Form>
   )
@@ -50,7 +51,7 @@ export function PasswordInput(props) {
   return (
     <Form onSubmit={handleSubmit}>
       <Form.Group controlId={props.controlId}>
-        <Form.Label className="float-left">Password</Form.Label>
+        <Form.Label className="form-text text-muted float-left">Password</Form.Label>
         <Form.Control
           type="password"
           value={password}
