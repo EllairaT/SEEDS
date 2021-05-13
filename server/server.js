@@ -2,17 +2,19 @@
 import express from 'express'
 import bodyParser from 'body-parser'
 import mongoose from 'mongoose'
+import { fileURLToPath } from 'url'
 import cors from 'cors'
 import path, { dirname } from 'path'
 import dotenv from 'dotenv'
 import connectDB from './config/db.js'
 import postRoutes from './routes/articles.js'
 import authRoute from './routes/auth.js'
-import { fileURLToPath } from 'url'
+
 dotenv.config({ path: '../.env' })
 
 const app = express()
 const { PORT } = process.env
+// eslint-disable-next-line no-underscore-dangle
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 connectDB()
@@ -36,9 +38,8 @@ app.use('/articles', postRoutes)
 // Serve static files from the React frontend app
 app.use(express.static(path.join(__dirname, '../client/build')))
 
-// AFTER defining routes: Anything that doesn't match what's above, send back index.html; (the beginning slash ('/') in the string is important!)
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/../client/build/index.html'))
+  res.sendFile(path.join(`${__dirname}/../client/build/index.html`))
 })
 
 // Start server
