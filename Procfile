@@ -1,1 +1,2 @@
-web: node server/server.js
+web: npm run client
+api: node server/server.js
