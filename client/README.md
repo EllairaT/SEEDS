@@ -1,1 +1,0 @@
-[![CI Backend](https://github.com/EllairaT/SEEDS/actions/workflows/ci-backend.yml/badge.svg)](https://github.com/EllairaT/SEEDS/actions/workflows/ci-backend.yml)
