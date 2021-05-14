@@ -1,6 +1,6 @@
 import express from 'express'
 
-import getArticle from '../controllers/articles'
+import getArticle from '../controllers/articles.js'
 
 const router = express.Router()
 

@@ -1,8 +1,8 @@
 import express from 'express'
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
-import User from '../models/users'
-import { registerValidation, loginValidation } from '../validation'
+import User from '../models/users.js'
+import { registerValidation, loginValidation } from '../validation.js'
 
 const router = express.Router()
 

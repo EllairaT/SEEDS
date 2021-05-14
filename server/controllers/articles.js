@@ -1,5 +1,5 @@
 // handlers for routes
-import Article from '../models/articles'
+import Article from '../models/articles.js'
 
 const getArticle = async (req, res) => {
   try {
