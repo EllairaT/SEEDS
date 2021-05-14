@@ -4,13 +4,12 @@ import Table from 'react-bootstrap/Card'
 import Row from 'react-bootstrap/Row'
 
 function ArticleObj(props) {
-
   return (
     <>
-      {/* <Card className="card text-white bg-primary m-3">
+      <Card className="card text-white bg-primary m-3">
         <Card.Header>{props.title}</Card.Header>
         <Card.Body>Author: {props.author}</Card.Body>
-      </Card> */}
+      </Card>
     </>
   )
 }
