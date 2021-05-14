@@ -1,0 +1,5 @@
+export const Types = {
+  LOGIN: 'LOGIN',
+  REGISTER: 'REGISTER',
+  SUBMISSION_STATUS: 'SUBMISSION_STATUS'
+}

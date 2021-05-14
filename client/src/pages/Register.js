@@ -5,22 +5,55 @@ import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import Facebook from '../components/Facebook'
 import Google from '../components/Google'
+import Form from 'react-bootstrap/Form'
+// import { ActionCreators } from '../actions/users.js'
+// import { useDispatch, useSelector } from 'react-redux'
 
-function Register() {
+function Register(props) {
+  // const onChange = (event) => setPassword(event.target.value)
+  // const [state, setState] = useState({
+  //   user: {
+  //     name: '',
+  //     email: '',
+  //     password: ''
+  //   },
+  //   submitted: false
+  // })
+  // const post = useSelector((state) => (currentId ? state.posts.find((message) => message._id === currentId) : null))
+
+  // const dispatch = useDispatch()
+  // useEffect(() => {
+  //   if (post) setPostData(post)
+  // }, [post])
+
+  const handleSubmit = async (evt) => {
+    evt.preventDefault()
+
+    //   if (currentId === 0) {
+    //     dispatch(createPost(postData))
+    //     clear()
+    //   } else {
+    //     dispatch(updatePost(currentId, postData))
+    //     clear()
+    //   }
+  }
   return (
     <div className="Register m-5">
       <h1>Register a new SEEDS account</h1>
-      <lead>Add to the rapidly growing repository of software engineering methods!</lead>
+      <span>Add to the rapidly growing repository of software engineering methods!</span>
 
       <Container className="p-5">
         <Card style={{ width: '20rem', border: 0 }} className="mx-auto">
-          <NameInput />
-          <EmailInput />
-          <PasswordInput />
-
-          <Button>Register</Button>
+          <Form onSubmit={handleSubmit}>
+            <NameInput />
+            <EmailInput />
+            <PasswordInput />
+            <Button className="mt-3 mb-3" style={{ width: '100%' }}>
+              Register
+            </Button>
+          </Form>
           <br />
-          <lead>---------or---------</lead>
+          <span>or</span>
           <Facebook />
           <Google />
         </Card>

@@ -1,0 +1,92 @@
+{
+  "name": "seeds-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^12.8.3",
+    "bcryptjs": "^2.4.3",
+    "bibtex": "^0.9.0",
+    "bibtex-parse-js": "0.0.24",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.6.0",
+    "concurrently": "^6.0.2",
+    "config": "^3.3.6",
+    "cors": "^2.8.5",
+    "dotenv": "^9.0.0",
+    "express": "^4.17.1",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.6",
+    "mongoose": "^5.12.5",
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.5.2",
+    "react-dom": "^17.0.2",
+    "react-facebook-login": "^4.1.1",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.2.4",
+    "url": "^0.11.0",
+    "validation": "0.0.1",
+    "web-vitals": "^1.1.1"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "eject": "react-scripts eject",
+    "lint": "eslint .",
+    "test": "react-scripts test"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.0.0",
+    "@typescript-eslint/parser": "^4.0.0",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
+  },
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EllairaT/SEEDS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EllairaT/SEEDS/issues"
+  },
+  "homepage": "https://github.com/EllairaT/SEEDS#readme",
+  "description": ""
+}

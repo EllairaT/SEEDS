@@ -21,6 +21,17 @@
     "comma-dangle": ["error", "never"],
     "linebreak-style": ["error", "windows"],
     "no-unused-vars": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "off",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "import/no-anonymous-default-export": ["off"]
   }
 }
