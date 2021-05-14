@@ -7,10 +7,6 @@ export function NameInput(props) {
   const [name, setName] = useState('')
   const onChange = (event) => setName(event.target.value)
 
-  const handleSubmit = (evt) => {
-    evt.preventDefault() //prevent default behavior, in this case entering data when 'enter' is pressed
-  }
-
   return (
     <Form.Control
       type="text"
@@ -27,9 +23,6 @@ export function NameInput(props) {
 export function EmailInput(props) {
   const [email, setEmail] = useState('example@email.com')
   const onChange = (event) => setEmail(event.target.value)
-  const handleSubmit = (evt) => {
-    evt.preventDefault()
-  }
 
   return (
     <Form.Control
@@ -47,9 +40,6 @@ export function EmailInput(props) {
 export function PasswordInput(props) {
   const [password, setPassword] = useState('')
   const onChange = (event) => setPassword(event.target.value)
-  const handleSubmit = (evt) => {
-    evt.preventDefault()
-  }
 
   return (
     <Form.Control

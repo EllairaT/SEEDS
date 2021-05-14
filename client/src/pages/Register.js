@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { NameInput, EmailInput, PasswordInput } from '../components/InputForms'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
@@ -6,19 +6,19 @@ import Container from 'react-bootstrap/Container'
 import Facebook from '../components/Facebook'
 import Google from '../components/Google'
 import Form from 'react-bootstrap/Form'
-import { ActionCreators } from '../actions/users'
-import { useDispatch, useSelector } from 'react-redux'
+// import { ActionCreators } from '../actions/users.js'
+// import { useDispatch, useSelector } from 'react-redux'
 
 function Register(props) {
   // const onChange = (event) => setPassword(event.target.value)
-  const [state, setState] = useState({
-    user: {
-      name: '',
-      email: '',
-      password: ''
-    },
-    submitted: false
-  })
+  // const [state, setState] = useState({
+  //   user: {
+  //     name: '',
+  //     email: '',
+  //     password: ''
+  //   },
+  //   submitted: false
+  // })
   // const post = useSelector((state) => (currentId ? state.posts.find((message) => message._id === currentId) : null))
 
   // const dispatch = useDispatch()
@@ -44,7 +44,7 @@ function Register(props) {
 
       <Container className="p-5">
         <Card style={{ width: '20rem', border: 0 }} className="mx-auto">
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <NameInput />
             <EmailInput />
             <PasswordInput />
