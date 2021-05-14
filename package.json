@@ -2,7 +2,7 @@
   "name": "seeds",
   "version": "1.0.0",
   "description": "[![CI Backend](https://github.com/EllairaT/SEEDS/actions/workflows/ci-backend.yml/badge.svg?branch=server)](https://github.com/EllairaT/SEEDS/actions/workflows/ci-backend.yml) [![CI Frontend](https://github.com/EllairaT/SEEDS/actions/workflows/ci-frontend.yml/badge.svg)](https://github.com/EllairaT/SEEDS/actions/workflows/ci-frontend.yml)",
-  "main": "server.js",
+  "main": "server.js prefix --server",
   "dependencies": {
     "eslint": "^7.26.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -13,7 +13,11 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
