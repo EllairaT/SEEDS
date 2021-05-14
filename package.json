@@ -41,7 +41,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "eject": "react-scripts eject",
-    "lint": "eslint .",
+    "lint": "cd server/ && eslint .",
     "test": "react-scripts test"
   },
   "browserslist": {
