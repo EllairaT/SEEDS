@@ -11,16 +11,16 @@ function DisplayTable(headers, props) {
   }
   const arr = []
 
-  const arrays = [
-    {
-      title: '1',
-      author: 'a'
-    },
-    {
-      title: '2',
-      author: 'b'
-    }
-  ]
+  // const arrays = [
+  //   {
+  //     title: '1',
+  //     author: 'a'
+  //   },
+  //   {
+  //     title: '2',
+  //     author: 'b'
+  //   }
+  // ]
 
   for (let index = 1; index <= 10; index++) {
     var title = 'article: '.concat(index)
