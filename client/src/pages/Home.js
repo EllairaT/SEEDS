@@ -1,5 +1,4 @@
 import React from 'react'
-import Article from '../components/Article'
 import Container from 'react-bootstrap/Container'
 // import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
@@ -18,10 +17,6 @@ function Home() {
   return (
     <div className="Home">
       <Container>
-        <Article title="Sample" author="Ellai" />
-        <Article title="Sample1" author="Ellai1" />
-        <Article title="Sample2" author="Ellai2" />
-
         <DisplayTable />
       </Container>
     </div>

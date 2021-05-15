@@ -23,11 +23,12 @@ function DisplayTable(headers, props) {
   ]
 
   for (let index = 1; index <= 10; index++) {
-    arr.push(<Article index={index} title={'idiot'} />)
+    var title = 'article: '.concat(index)
+    arr.push(<Article index={index} title={title} />)
   }
 
   return (
-    <Table striped bordered hover variant="dark">
+    <Table striped hover variant="primary" className="mt-5">
       <thead>
         <tr>
           <th>{header.title}</th>
