@@ -38,7 +38,7 @@
     "build": "cd client/ && npm install && npm run build",
     "server": "cd server/ && node server.js",
     "devserver": "nodemon server",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true npm install --prefix client && npm run build --prefix client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true  node --max-old-space-size=4090 server/server.js && npm install --prefix client && npm run build --prefix client",
     "eject": "react-scripts eject",
     "lint": "cd server/ && eslint .",
     "test": "react-scripts test"

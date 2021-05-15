@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form'
 
+//handling submits should be done in the file where the <Form> tag is.
+
 // Name input
 export function NameInput(props) {
   //useState returns an array. first item is current value, second val is the value to set it to
