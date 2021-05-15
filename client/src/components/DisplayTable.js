@@ -1,37 +1,46 @@
 import React from 'react'
-// import Article from '/Article'
+import {Table} from 'react-bootstrap'
+ import Article from './Article'
 
-function DisplayTable(props) {
+function DisplayTable(headers, props) {
   // props = {thing: 'thing'}
 
+const header = { 
+    index: '#',
+    title: 'Title',
+}
+const arr = []
+
+const arrays = [
+  {
+    title: '1',
+    author: 'a'
+  },
+  {
+    title: '2',
+    author: 'b'
+  }
+]
+
+
+for (let index = 1; index <= 10; index++) {
+  arr.push(<Article index={index} title={"idiot"}/>)
+}
+  
   return (
     <Table striped bordered hover variant="dark">
       <thead>
         <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>{header.title}</th>
+          <th>{header.index}</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td colSpan="2">Larry the Bird</td>
-          <td>@twitter</td>
-        </tr>
+
+      
+       {arr}
+      
+
       </tbody>
     </Table>
   )

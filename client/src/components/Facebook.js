@@ -12,7 +12,7 @@ export default class Facebook extends Component {
     this.cont = ''
   }
 
-  cont = ''
+  // cont = ''
 
   state = {
     isLoggedIn: false,
@@ -45,7 +45,7 @@ export default class Facebook extends Component {
   } 
 
   getFBCont(){
-    return cont
+    return this.cont
   }
 
   setState(bool){
