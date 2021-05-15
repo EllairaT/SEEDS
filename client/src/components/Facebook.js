@@ -6,6 +6,14 @@ import Button from 'react-bootstrap/Button'
 import * as Icon from 'react-bootstrap-icons'
 
 export default class Facebook extends Component {
+  constructor(props){
+    super(props)
+    this.state = {}
+    this.cont = ''
+  }
+
+  cont = ''
+
   state = {
     isLoggedIn: false,
     userID: '',
@@ -30,6 +38,22 @@ export default class Facebook extends Component {
 
   handleFailure = () => {
     console.log('failed to login')
+  }
+
+  checkState = (state) => {
+    console.log(state)
+  } 
+
+  getFBCont(){
+    return cont
+  }
+
+  setState(bool){
+    this.setState({isLoggedIn: {bool}})
+  }
+
+  setName(input) {
+    this.setState({name: input})
   }
 
   render() {
@@ -61,7 +85,9 @@ export default class Facebook extends Component {
         />
       )
     }
-
+    this.cont = fbCont
     return <>{fbCont}</>
   }
+
+
 }

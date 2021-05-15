@@ -14,6 +14,7 @@
     "bibtex-parse-js": "0.0.24",
     "bootstrap": "^4.6.0",
     "bootswatch": "^5.0.0",
+    "enzyme": "^3.11.0",
     "mongodb-client-encryption": "^1.2.3",
     "openssl-nodejs": "^1.0.5",
     "react": "^17.0.2",
@@ -47,6 +48,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.0.0",
     "@typescript-eslint/parser": "^4.0.0",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.1",
     "eslint": "^7.5.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-react-app": "^6.0.0",
