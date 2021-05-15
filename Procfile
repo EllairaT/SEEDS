@@ -1,2 +1,2 @@
 api: node server/server.js
-web: npm run build --prefix client/
+worker: npm run build --prefix client/
