@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container'
 // import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 // import { loginUser } from '../actions/users'
+import DisplayTable from '../components/DisplayTable'
 
 function Home() {
   const articles = useSelector((state) => state.articles)
@@ -20,6 +21,8 @@ function Home() {
         <Article title="Sample" author="Ellai" />
         <Article title="Sample1" author="Ellai1" />
         <Article title="Sample2" author="Ellai2" />
+
+        <DisplayTable />
       </Container>
     </div>
   )
