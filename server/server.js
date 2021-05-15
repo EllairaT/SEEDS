@@ -13,7 +13,7 @@ import authRoute from './routes/auth.js'
 dotenv.config({ path: '../.env' })
 
 const app = express()
-const { PORT } = process.env.PORT || 5000
+const PORT = process.env.PORT || 5000
 // eslint-disable-next-line no-underscore-dangle
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
