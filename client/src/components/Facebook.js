@@ -32,6 +32,7 @@ export default class Facebook extends Component {
     console.log('failed to login')
   }
 
+
   render() {
     let fbCont
 
