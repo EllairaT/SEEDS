@@ -26,7 +26,7 @@ app.use(cors())
 app.use(express.json())
 
 // Routes
-app.get('/', (req, res) => {
+app.get('/server/*', (req, res) => {
   res.send('Server is running!')
 })
 
