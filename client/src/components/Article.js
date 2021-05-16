@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col'
 import { useDispatch } from 'react-redux'
 
 const Article = ({ article, setID }) => {
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
   //we will need the setID (which is the _id) for later
   //TODO: add publisher, type (if the article is an article or a book, etc etc)
 
