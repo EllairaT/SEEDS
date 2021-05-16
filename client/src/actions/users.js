@@ -1,16 +1,21 @@
-// import * as api from "../api";
+import * as api from '../api/index.js'
+import { userConstants } from '../constants/userConstants.js'
 
-import { Types } from '../constants/userActions.js'
+//this file is for all actions that have anything to do with users.
 
-//Action creators are functions that return actions
+export const login = () => async (dispatch) => {
+  try {
+    const { data } = await api.login()
+    dispatch({ type: userConstants.LOGIN_REQUEST, payload: data })
+  } catch (err) {}
+}
 
-export const ActionCreators = {
-  register: (user) => ({ type: Types.REGISTER, payload: { user } }),
+function logout() {}
 
-  login: (user) => ({ type: Types.LOGIN, payload: { user } }),
-
-  form_submission: (user) => ({
-    type: Types.SUBMISSION_STATUS,
-    payload: { user }
-  })
+//pass a user object
+export const register = () => async (dispatch) => {
+  try {
+    const { data } = await api.register()
+    dispatch({ type: userConstants.REGISTER_REQUEST, payload: data })
+  } catch (err) {}
 }

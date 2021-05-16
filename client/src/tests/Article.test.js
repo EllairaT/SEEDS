@@ -13,18 +13,3 @@ test('render without crashing', () => {
   expect(wrapper.find(Card.Header)).toBeTruthy()
   expect(wrapper.find(Card.Body)).toBeTruthy()
 })
-
-// //print expected title
-// test('Print expected title', () => {
-
-//     const wrapper = mount(<ArticleObj title="Sample" author="Ellai" />)
-//     const header = wrapper.find(Card.Header).text()
-//     expect(header).toEqual("Sample")
-// })
-
-// //print expected body
-// test('Print expected body', () => {
-//     const wrapper = mount(<ArticleObj title="Sample" author="Ellai" />)
-//     const body = wrapper.find(Card.Body).text()
-//     expect(body).toEqual("Author: Ellai")
-// })

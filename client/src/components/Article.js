@@ -1,22 +1,34 @@
 import React from 'react'
-// import Card from 'react-bootstrap/Card'
+import Card from 'react-bootstrap/Card'
 // import Table from 'react-bootstrap/Card'
-// import Row from 'react-bootstrap/Row'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import { useDispatch } from 'react-redux'
 
-function ArticleObj(props) {
+const Article = ({ article, setID }) => {
+  const dispatch = useDispatch()
+
   return (
     <>
-      {/* <Card className="card text-white bg-primary m-3">
-        <Card.Header>{props.title}</Card.Header>
-        <Card.Body>Author: {props.author}</Card.Body>
-      </Card>  */}
-
-      <tr>
-        <td>{props.index}</td>
-        <td>{props.title}</td>
-      </tr>
+      <Card border="light" className="m-2">
+        <Card.Body>
+          <Row>
+            <Col xl={6} className="h3">
+              {/* {article.index} */}
+            </Col>
+            <Col xl={6} className="h3">
+              {/* {article.title} */}
+            </Col>
+          </Row>
+        </Card.Body>
+        <Card.Footer>
+          <span className="text-muted float-left">
+            <small>Added 3 days ago</small>
+          </span>
+        </Card.Footer>
+      </Card>
     </>
   )
 }
 
-export default ArticleObj
+export default Article

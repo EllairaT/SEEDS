@@ -1,23 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Container from 'react-bootstrap/Container'
-// import { useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
-// import { loginUser } from '../actions/users'
-import DisplayTable from '../components/DisplayTable'
+import DisplayArticles from '../components/DisplayArticles'
+import { getArticles } from '../actions/articles.js'
 
 function Home() {
-  const articles = useSelector((state) => state.articles)
+  const dispatch = useDispatch()
 
-  console.log(articles)
-  //call useeffect, then make a callback function
-  // useEffect(() => {
-  //   dispatch(loginUser())
-  // }, [dispatch])
+  useEffect(() => {
+    dispatch(getArticles())
+  }, [dispatch])
 
   return (
     <div className="Home">
       <Container>
-        <DisplayTable />
+        <DisplayArticles />
       </Container>
     </div>
   )

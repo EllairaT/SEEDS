@@ -10,7 +10,16 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import reducers from './reducers'
 
+//The store is the GLOBALISED state.
+//this makes data available to every component, if they need it
 const store = createStore(reducers, compose(applyMiddleware(thunk)))
+
+//Action in redux describes what we want to do.
+
+//Reducer describes how actions transform one state into another state
+
+//DISPATCH executes the action (send action to reducer, reducer checks what to do, then the store gets updated)
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>

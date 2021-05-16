@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NameInput, EmailInput, PasswordInput } from '../components/InputForms'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
@@ -6,36 +6,23 @@ import Container from 'react-bootstrap/Container'
 import Facebook from '../components/Facebook'
 import Google from '../components/Google'
 import Form from 'react-bootstrap/Form'
+
 // import { ActionCreators } from '../actions/users.js'
 // import { useDispatch, useSelector } from 'react-redux'
 
-function Register(props) {
-  // const onChange = (event) => setPassword(event.target.value)
-  // const [state, setState] = useState({
-  //   user: {
-  //     name: '',
-  //     email: '',
-  //     password: ''
-  //   },
-  //   submitted: false
-  // })
-  // const post = useSelector((state) => (currentId ? state.posts.find((message) => message._id === currentId) : null))
+function Register() {
+  //set initial state
+  const [user, setUser] = useState({
+    name: '',
+    email: '',
+    password: ''
+  })
 
-  // const dispatch = useDispatch()
-  // useEffect(() => {
-  //   if (post) setPostData(post)
-  // }, [post])
+  const [submitted, setSubmitted] = useState(false)
+  //useSelector lets us access the data from the store state, which we made in index.js
 
   const handleSubmit = async (evt) => {
     evt.preventDefault()
-
-    //   if (currentId === 0) {
-    //     dispatch(createPost(postData))
-    //     clear()
-    //   } else {
-    //     dispatch(updatePost(currentId, postData))
-    //     clear()
-    //   }
   }
   return (
     <div className="Register m-5">

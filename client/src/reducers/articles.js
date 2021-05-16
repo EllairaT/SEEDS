@@ -1,20 +1,20 @@
 /* eslint-disable import/no-anonymous-default-export */
-import { Types } from '../constants/articleActions'
+import { articleTypes } from '../constants/articleConstants'
 
+//initial state of our articles
 const initialState = {
   article: {
     key: '',
     title: '',
     author: ''
-  },
-  formSubmitted: false
+  }
 }
 
-export default (articles = initialState, action) => {
+export default (articles = { initialState }, action) => {
   switch (action.type) {
-    case Types.FETCH:
+    case articleTypes.FETCH_ALL:
       return action.payload
-    case Types.ADD:
+    case articleTypes.ADD:
       return articles
     default:
       return articles

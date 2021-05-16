@@ -1,11 +1,12 @@
-import * as api from '../api'
+import * as api from '../api/index.js'
+import { articleTypes } from '../constants/articleConstants.js'
 
-//Action Creators
+//this file is for all actions that have anything to do with users.
+
 export const getArticles = () => async (dispatch) => {
   try {
     const { data } = await api.fetchArticles()
-    dispatch({ type: 'FETCH', payload: data })
-  } catch (err) {
-    console.log(err.message)
-  }
+    console.log(data)
+    dispatch({ type: articleTypes.FETCH_ALL, payload: data })
+  } catch (err) {}
 }

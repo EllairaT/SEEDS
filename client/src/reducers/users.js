@@ -1,35 +1,23 @@
 /* eslint-disable import/no-anonymous-default-export */
 
-import { Types } from '../constants/userActions'
+import { userConstants } from '../constants/userConstants.js'
 
-const initialState = {
-  profile: {
-    name: '',
-    email: '',
-    profileImage: ''
-  },
-  formSubmitted: false
-}
-
-export default (users = initialState, action) => {
+export default (users = {}, action) => {
   switch (action.type) {
-    case Types.REGISTER:
+    case userConstants.REGISTER:
       return {
         ...users,
-        profile: action.payload.user,
-        formSubmitted: false
+        profile: action.payload.user
       }
-    case Types.LOGIN:
+    case userConstants.LOGIN:
       return {
         ...users,
-        profile: action.payload.user,
-        formSubmitted: false
+        profile: action.payload.user
       }
-    case Types.SUBMISSION_STATUS:
+    case userConstants.SUBMISSION_STATUS:
       return {
         ...users,
-        profile: action.payload.user,
-        formSubmitted: false
+        profile: action.payload.user
       }
     default:
       return users

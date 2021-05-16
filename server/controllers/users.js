@@ -7,7 +7,7 @@ import { registerValidation, loginValidation } from '../validation.js'
 const router = express.Router()
 
 // Register new user
-export const loginUser = async (req, res) => {
+export const registerUser = async (req, res) => {
   // Validate input
   const { error } = registerValidation(req.body)
   if (error) {
@@ -42,8 +42,7 @@ export const loginUser = async (req, res) => {
   }
 }
 
-// Login for  existing user
-export const registerUser = async (req, res) => {
+export const loginUser = async (req, res) => {
   // Validate input
   const { error } = loginValidation(req.body)
   if (error) {

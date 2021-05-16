@@ -1,13 +1,11 @@
 // server.js
 import express from 'express'
-import bodyParser from 'body-parser'
-import mongoose from 'mongoose'
 import { fileURLToPath } from 'url'
 import cors from 'cors'
 import path, { dirname } from 'path'
 import dotenv from 'dotenv'
 import connectDB from './config/db.js'
-import postRoutes from './routes/articles.js'
+import apiRoutes from './routes/articles.js'
 import authRoute from './routes/auth.js'
 
 dotenv.config({ path: '../.env' })
@@ -22,6 +20,7 @@ connectDB()
 // configure body parser for AJAX requests
 app.use(express.urlencoded({ extended: true }))
 app.use(cors())
+
 // Middleware
 app.use(express.json())
 
@@ -32,7 +31,7 @@ app.get('/server/*', (req, res) => {
 
 // Route middleware
 app.use('/auth', authRoute)
-app.use('/api', postRoutes)
+app.use('/api', apiRoutes)
 
 // Route client build
 // Serve static files from the React frontend app
