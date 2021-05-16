@@ -4,7 +4,6 @@ import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import DisplayArticles from '../components/DisplayArticles'
 import { getArticles } from '../actions/articles.js'
-
 function Home() {
   const dispatch = useDispatch()
 

@@ -7,24 +7,23 @@ import { useDispatch } from 'react-redux'
 
 const Article = ({ article, setID }) => {
   const dispatch = useDispatch()
+  //we will need the setID (which is the _id) for later
+  //TODO: add publisher, type (if the article is an article or a book, etc etc)
 
   return (
     <>
-      <Card border="light" className="m-2">
+      <Card border="light" bg="light" className="m-4">
+        <Card.Header style={{ background: 0 }}>
+          <div className="float-start"> {article.AUTHOR ? article.AUTHOR : 'Author unknown'}</div>
+          <div className="float-end"> {article.YEAR ? article.YEAR : 'Year unknown'}</div>
+        </Card.Header>
         <Card.Body>
-          <Row>
-            <Col xl={6} className="h3">
-              {article._id}
-            </Col>
-            <Col xl={6} className="h3">
-              {/* {article.title} */}
-            </Col>
-          </Row>
+          <Col className="h6">{article.TITLE}</Col>
+
+          <span className="text-info">{article.ANNOTE ? article.ANNOTE : ''}</span>
         </Card.Body>
-        <Card.Footer>
-          <span className="text-muted float-left">
-            <small>Added 3 days ago</small>
-          </span>
+        <Card.Footer style={{ background: 0, border: 0 }}>
+          <small className="text-muted float-left">Added 3 days ago</small>
         </Card.Footer>
       </Card>
     </>

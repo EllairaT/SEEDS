@@ -7,5 +7,6 @@ export const getArticles = () => async (dispatch) => {
   try {
     const { data } = await api.fetchArticles()
     dispatch({ type: articleTypes.FETCH_ALL, payload: data })
+    console.log(data)
   } catch (err) {}
 }

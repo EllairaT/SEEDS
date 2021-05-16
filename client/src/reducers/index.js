@@ -5,7 +5,9 @@ import articles from './articles.js'
 import users from './users.js'
 
 //add all reducers. articles, users, etc
-export default combineReducers({
+const rootReducers = combineReducers({
   articles,
   users
 })
+
+export default rootReducers

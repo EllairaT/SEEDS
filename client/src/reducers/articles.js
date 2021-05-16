@@ -1,16 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 import { articleTypes } from '../constants/articleConstants'
 
-//initial state of our articles
-const initialState = {
-  article: {
-    key: '',
-    title: '',
-    author: ''
-  }
-}
-
-export default (articles = { initialState }, action) => {
+export default (articles = [], action) => {
   switch (action.type) {
     case articleTypes.FETCH_ALL:
       return action.payload
