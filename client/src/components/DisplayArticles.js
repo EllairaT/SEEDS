@@ -3,13 +3,17 @@ import Article from './Article'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
-
+import { getArticles } from '../actions/articles.js'
 import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 const DisplayArticles = ({ setCurrentId }) => {
   const articles = useSelector((state) => state.articles)
+  // const dispatch = useDispatch()
 
-  console.log(articles)
+  // useEffect(() => {
+  //   dispatch(getArticles())
+  // }, [dispatch])
 
   // articles.forEach((a) => {
   //   arr.push(arr)
@@ -28,9 +32,6 @@ const DisplayArticles = ({ setCurrentId }) => {
             Title
           </Col>
         </Row>
-
-        {/* Show rows of articles */}
-        <Article />
       </Container>
     </>
   )

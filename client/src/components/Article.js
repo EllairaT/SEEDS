@@ -14,7 +14,7 @@ const Article = ({ article, setID }) => {
         <Card.Body>
           <Row>
             <Col xl={6} className="h3">
-              {/* {article.index} */}
+              {article._id}
             </Col>
             <Col xl={6} className="h3">
               {/* {article.title} */}

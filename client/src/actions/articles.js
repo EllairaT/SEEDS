@@ -6,7 +6,6 @@ import { articleTypes } from '../constants/articleConstants.js'
 export const getArticles = () => async (dispatch) => {
   try {
     const { data } = await api.fetchArticles()
-    console.log(data)
     dispatch({ type: articleTypes.FETCH_ALL, payload: data })
   } catch (err) {}
 }
