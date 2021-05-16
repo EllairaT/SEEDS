@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
 
 // Route middleware
 app.use('/auth', authRoute)
-app.use('/articles', postRoutes)
+app.use('/api', postRoutes)
 
 // Route client build
 // Serve static files from the React frontend app
@@ -45,5 +45,4 @@ app.get('*', (req, res) => {
 // Start server
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}.`)
-  console.log(__dirname)
 })
