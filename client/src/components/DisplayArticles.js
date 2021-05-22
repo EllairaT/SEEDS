@@ -25,53 +25,34 @@ const DisplayArticles = () => {
   //get articles from the store
   const articles = useSelector((state) => state.articles)
 
-  // const headCells = [
-  //   { id: 'index', numeric: true, label: 'Index' },
-  //   { id: 'title', numeric: false, label: 'Title' },
-  //   { id: 'author', numeric: false, label: 'Author' },
-  //   { id: 'date', numeric: false, label: 'Date Published' }
-  // ]
+  const headers = [
+    'Author',
+    'Title',
+    'Year',
+  ]
 
-  // const useRowStyles = makeStyles({
-  //   root: {
-  //     '& > *': {
-  //       borderBottom: 'unset',
-  //     },
-  //   },
-  // });
-
-  // const createData = (name, calories, fat, carbs, protein, price) => {
-  //   const stuff = {
-  //     name,
-  //     calories,
-  //     fat,
-  //     carbs,
-  //     protein,
-  //     price,
-  //     history: [
-  //       { date: '2020-01-05', customerId: '11091700', amount: 3 },
-  //       { date: '2020-01-02', customerId: 'Anonymous', amount: 1 },
-  //     ],
-  //   }
-  // }
-  // const Row = (props) => {
-  //   const { row } = props;
-  //   const [open, setOpen] = React.useState(false);
-  //   const classes = useRowStyles();
-  // }
   return (
     <>
-
-      {/* for every article, make a new row with the article id as the key, and make a new article component */}
-      {/* {articles.map((a) => (
-          <Row key={a._id}>
-            <Article article={a} setID={a._id} />
-          </Row>
-        ))} */}
-
-
       <Container fluid className="mt-5">
 
+        <TableContainer component={Paper}>
+          <Table aria-label="collapsible table">
+            <TableHead>
+              <TableRow>
+                {headers.map((h) => (
+                  <TableCell>{h}</TableCell>
+                ))}
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {articles.map((a) => (
+                <TableRow key={a._id}>
+                  <Article article={a} />
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
 
       </Container>
     </>
