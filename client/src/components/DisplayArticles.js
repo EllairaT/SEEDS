@@ -24,10 +24,11 @@ import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 const DisplayArticles = () => {
   //get articles from the store
   const articles = useSelector((state) => state.articles)
+  const [open, setOpen] = React.useState(false)
 
   const headers = [
-    'Author',
     'Title',
+    'Author',
     'Year',
   ]
 
@@ -39,6 +40,7 @@ const DisplayArticles = () => {
           <Table aria-label="collapsible table">
             <TableHead>
               <TableRow>
+                <TableCell></TableCell>
                 {headers.map((h) => (
                   <TableCell>{h}</TableCell>
                 ))}
@@ -46,10 +48,9 @@ const DisplayArticles = () => {
             </TableHead>
             <TableBody>
               {articles.map((a) => (
-                <TableRow key={a._id}>
-                  <Article article={a} />
-                </TableRow>
+                <Article article={a} />
               ))}
+
             </TableBody>
           </Table>
         </TableContainer>

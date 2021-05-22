@@ -7,6 +7,7 @@ import { getArticles } from '../actions/articles.js'
 import { ArticleInput, DateInput } from '../components/InputForms'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+
 function Home() {
   const dispatch = useDispatch()
 
