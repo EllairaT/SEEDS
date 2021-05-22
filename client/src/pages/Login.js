@@ -31,6 +31,7 @@ function Login() {
         <Card style={{ width: '18rem', border: 0 }} className="mx-auto">
           <EmailInput />
           <PasswordInput />
+          
 
           <Button type="submit" onClick={handleSubmit}>
             Log in
