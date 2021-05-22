@@ -53,4 +53,53 @@ export function PasswordInput(props) {
   )
 }
 
+<<<<<<< Updated upstream
+=======
+// Keyword input article (searches table for input)
+export function DateInput(props) {
+  const [date, setDate] = useState('')
+  const onChange = (event) => setDate(event.target.value)
+
+  const onKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      console.log('Enter key was pressed')
+      event.preventDefault()
+    }
+  }
+  return (
+    <Form.Control
+      type="date"
+      value={date}
+      ref={props.ref}
+      placeholder="Author, Title, etc..."
+      onChange={onChange}
+      onKeyDown={onKeyDown}
+      className="mt-3 mb-3"
+    />
+  )
+}
+
+export function URLinput(props) {
+  const [URL, setURL] = useState('')
+  const onChange = (event) => setURL(event.target.value)
+
+  const onKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      console.log('Enter key was pressed')
+      event.preventDefault()
+    }
+  }
+  return (
+    <Form.Control
+      type="URL"
+      value={URL}
+      ref={props.ref}
+      placeholder="URL..."
+      onChange={onChange}
+      onKeyDown={onKeyDown}
+      className="mt-3 mb-3"
+    />
+  )
+}
+>>>>>>> Stashed changes
 //TODO: other inputs

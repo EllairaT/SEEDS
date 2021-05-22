@@ -7,6 +7,7 @@ import Register from '../pages/Register'
 // Import bootstrap components
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
+import Submit from '../pages/Submit'
 
 function NavBar() {
   return (
@@ -18,12 +19,15 @@ function NavBar() {
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/Login">Login</Nav.Link>
           <Nav.Link href="/Register">Register</Nav.Link>
+          <Nav.Link href="/Submit">Submit</Nav.Link>
         </Nav>
       </Navbar>
 
       <Route exact path="/" component={Home} />
       <Route exact path="/Login" component={Login} />
       <Route exact path="/Register" component={Register} />
+      <Route exact path="/Submit" component={Submit} />
+
     </>
   )
 }
