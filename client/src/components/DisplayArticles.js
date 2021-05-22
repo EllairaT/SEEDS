@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Article from './Article'
+import DataGridTest from './DataGrid'
 import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
 import { useSelector } from 'react-redux'
@@ -20,6 +20,7 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import Article from './Article'
 
 const DisplayArticles = () => {
   //get articles from the store
@@ -30,6 +31,8 @@ const DisplayArticles = () => {
     'Title',
     'Author',
     'Year',
+    'Article',
+    'Journal'
   ]
 
   return (
@@ -40,7 +43,9 @@ const DisplayArticles = () => {
           <Table aria-label="collapsible table">
             <TableHead>
               <TableRow>
-                <TableCell></TableCell>
+                <TableCell align='center'>
+                  {/* Empty Cell */}Index
+                </TableCell>
                 {headers.map((h) => (
                   <TableCell>{h}</TableCell>
                 ))}
