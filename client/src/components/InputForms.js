@@ -19,10 +19,10 @@ export function NameInput(props) {
   return (
     <Form.Control
       type="text"
-      value={name}
+      value={props.value}
       ref={props.ref}
       placeholder="Enter Name"
-      onChange={onChange}
+      onChange={props.onChange} //onfocusout
       onKeyDown={onKeyDown}
       className="mt-3 mb-3"
     />
