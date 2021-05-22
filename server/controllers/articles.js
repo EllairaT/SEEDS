@@ -1,6 +1,7 @@
 // handlers for routes
 import Article from '../models/articles.js'
 
+// rename later to getAll
 const getArticle = async (req, res) => {
   try {
     const getArticles = await Article.find({})
@@ -10,4 +11,5 @@ const getArticle = async (req, res) => {
   }
 }
 
+// const findArticle
 export default getArticle
