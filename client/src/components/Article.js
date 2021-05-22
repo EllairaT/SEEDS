@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Card from 'react-bootstrap/Card'
 // import Table from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
@@ -23,31 +23,31 @@ const Article = ({ article, setID }) => {
         </Card.Header> */}
         <Card.Body>
           <Col>
-          <div className="float-start"> {article.AUTHOR ? article.AUTHOR : 'Author unknown'}</div>
+            <div className="float-start"> {article.AUTHOR ? article.AUTHOR : 'Author unknown'}</div>
           </Col>
           <Col>
-          <div className="float-end"> {article.YEAR ? article.YEAR : 'Year unknown'}</div>
+            <div className="float-end"> {article.YEAR ? article.YEAR : 'Year unknown'}</div>
           </Col>
           <Col>
-          <div className=""> {article.TITLE ? article.TITLE : 'Year unknown'}</div>
+            <div className=""> {article.TITLE ? article.TITLE : 'Year unknown'}</div>
           </Col>
-        
-        
+
+
         </Card.Body>
         <Button class="btn btn-primary btn-sm"
-        onClick={() => setOpen(!open)}
-        aria-controls="example-collapse-text"
-        aria-expanded={open}
-      >
-        button
+          onClick={() => setOpen(!open)}
+          aria-controls="example-collapse-text"
+          aria-expanded={open}
+        >
+          button
       </Button>
-      <Collapse in={open}>
-        <div id="example-collapse-text">
-          <Card.Body>
-            <Col classname="h6">{article.TITLE}</Col>
-          </Card.Body>
-        </div>
-      </Collapse>
+        <Collapse in={open}>
+          <div id="example-collapse-text">
+            <Card.Body>
+              <Col classname="h6">{article.TITLE}</Col>
+            </Card.Body>
+          </div>
+        </Collapse>
         <Card.Footer style={{ background: 0, border: 0 }}>
           <small className="text-muted float-left">Added 3 days ago</small>
         </Card.Footer>
