@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button'
 import * as Icon from 'react-bootstrap-icons'
 
 export default class Facebook extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {}
     this.cont = ''
@@ -42,18 +42,10 @@ export default class Facebook extends Component {
 
   checkState = (state) => {
     console.log(state)
-  } 
+  }
 
-  getFBCont(){
+  getFBCont() {
     return this.cont
-  }
-
-  setState(bool){
-    this.setState({isLoggedIn: {bool}})
-  }
-
-  setName(input) {
-    this.setState({name: input})
   }
 
   render() {

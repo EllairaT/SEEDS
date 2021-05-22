@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { useDispatch } from 'react-redux'
 
+//props
 const Article = ({ article, setID }) => {
   // const dispatch = useDispatch()
   //we will need the setID (which is the _id) for later
