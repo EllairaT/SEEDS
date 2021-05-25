@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:5000/",
   "dependencies": {
+    "@inovua/reactdatagrid-community": "^4.1.17",
     "@material-ui/core": "^4.11.4",
     "@material-ui/data-grid": "^4.0.0-alpha.29",
     "@material-ui/icons": "^4.11.2",
@@ -28,6 +29,8 @@
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
     "react-bootstrap-icons": "^1.4.1",
+    "react-data-grid": "^7.0.0-canary.48",
+    "react-data-grid-addons": "^7.0.0-alpha.24",
     "react-dom": "^17.0.2",
     "react-facebook-login": "^4.1.1",
     "react-google-login": "^5.2.2",

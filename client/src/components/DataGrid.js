@@ -1,30 +1,54 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
-import { DataGrid, GridToolbar } from '@material-ui/data-grid';
-import { useDemoData } from '@material-ui/x-grid-data-generator'
+import ReactDataGrid from '@inovua/reactdatagrid-community'
+import '@inovua/reactdatagrid-community/index.css'
 
 const DataGridTest = (props) => {
-    const articles = useSelector((state) => state.articles)
-    const { data } = useDemoData({
-        dataSet: articles,
-        rowLength: 1000,
-    });
+  const articles = useSelector((state) => state.articles)
+  const gridStyle = { minHeight: 550 }
+  const rowStyle = ({ data }) => {
+    const colorMap = {
+      none: '#b5b5b5'
+    }
+    return {
+      color: colorMap[data.author]
+    }
+  }
 
-    return (
-        <div style={{ height: 520, width: '100%' }}>
-            <DataGrid
-                {...data}
-                components={{
-                    Toolbar: GridToolbar,
-                }}
-                filterModel={{
-                    items: [{ columnField: 'Test', operatorValue: 'contains', value: 'shit' }],
-                }}
-            />
-        </div>
-    );
+  //AUTHOR, TITLE, MONTH, YEAR...
+  const columns = [
+    { name: 'author', header: 'Authors', defaultFlex: 2 },
+    { name: 'title', header: 'Title', defaultFlex: 2 },
+    { name: 'yr', header: 'Year', defaultFlex: 1 },
+    { name: 'journal', header: 'Journal', defaultFlex: 1 }
+  ]
 
+  //get rows from store and put them in array
+  const articleRows = []
 
+  articles.forEach((a) => {
+    var authorCol = a.AUTHOR ? a.AUTHOR : 'none'
+    var year = a.YEAR ? a.YEAR : 'unknown'
+    var jrnl = a.JOURNAL ? a.JOURNAL : 'none'
+    articleRows.push({ id: a._id, author: authorCol, title: a.TITLE, yr: year, journal: jrnl })
+  })
+
+  return (
+    <>
+      <div style={{ width: '100%' }}>
+        <ReactDataGrid
+          idProperty="id"
+          columns={columns}
+          dataSource={articleRows}
+          style={gridStyle}
+          rowStyle={rowStyle}
+          showCellBorders={false}
+          pagination={true}
+          rowHeight={60}
+        />
+      </div>
+    </>
+  )
 }
 
 export default DataGridTest

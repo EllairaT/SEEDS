@@ -8,6 +8,6 @@ export const getArticles = () => async (dispatch) => {
     const { data } = await api.fetchArticles()
     dispatch({ type: articleTypes.FETCH_ALL, payload: data })
     console.log(data)
-  } catch (err) { }
-  return (<></>)
+  } catch (err) {}
+  return <></>
 }

@@ -19,17 +19,22 @@ function Home() {
   return (
     <div className="Home">
       <Container>
-        <Row >
-          <Col><ArticleInput /></Col>
-          <Col><DateInput /></Col>
-          <Col><DateInput /></Col>
+        <Row>
+          <Col>
+            <ArticleInput />
+          </Col>
+          <Col>
+            <DateInput />
+          </Col>
+          <Col>
+            <DateInput />
+          </Col>
         </Row>
-        <DisplayArticles />
+        {/* <DisplayArticles /> */}
+        <br />
         <DataGridTest />
-
-
-      </Container >
-    </div >
+      </Container>
+    </div>
   )
 }
 export default Home
