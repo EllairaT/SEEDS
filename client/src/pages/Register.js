@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, setState } from 'react'
 import { NameInput, EmailInput, PasswordInput } from '../components/InputForms'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
@@ -18,6 +18,10 @@ function Register() {
     password: ''
   })
 
+  const handleChange = (e) => {
+    setUser({ name: e.target.value })
+  }
+
   const [submitted, setSubmitted] = useState(false)
   //useSelector lets us access the data from the store state, which we made in index.js
 
@@ -32,7 +36,7 @@ function Register() {
       <Container className="p-5">
         <Card style={{ width: '20rem', border: 0 }} className="mx-auto">
           <Form onSubmit={handleSubmit}>
-            <NameInput />
+            <NameInput onChange={handleChange} value={user.name} />
             <EmailInput />
             <PasswordInput />
             <Button className="mt-3 mb-3" style={{ width: '100%' }}>

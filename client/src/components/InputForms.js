@@ -19,10 +19,10 @@ export function NameInput(props) {
   return (
     <Form.Control
       type="text"
-      value={name}
+      value={props.value}
       ref={props.ref}
       placeholder="Enter Name"
-      onChange={onChange}
+      onChange={props.onChange} //onfocusout
       onKeyDown={onKeyDown}
       className="mt-3 mb-3"
     />
@@ -78,4 +78,51 @@ export function PasswordInput(props) {
   )
 }
 
+// Keyword input article (searches table for input)
+export function ArticleInput(props) {
+  const [searchQuery, setSearchQuery] = useState('')
+  const onChange = (event) => setSearchQuery(event.target.value)
+
+  const onKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      console.log('Enter key was pressed')
+      event.preventDefault()
+    }
+  }
+  return (
+    <Form.Control
+      type="search"
+      value={searchQuery}
+      ref={props.ref}
+      placeholder="Author, Title, etc..."
+      onChange={onChange}
+      onKeyDown={onKeyDown}
+      className="mt-3 mb-3"
+    />
+  )
+}
+
+// Keyword input article (searches table for input)
+export function DateInput(props) {
+  const [date, setDate] = useState('')
+  const onChange = (event) => setDate(event.target.value)
+
+  const onKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      console.log('Enter key was pressed')
+      event.preventDefault()
+    }
+  }
+  return (
+    <Form.Control
+      type="date"
+      value={date}
+      ref={props.ref}
+      placeholder="Author, Title, etc..."
+      onChange={onChange}
+      onKeyDown={onKeyDown}
+      className="mt-3 mb-3"
+    />
+  )
+}
 //TODO: other inputs

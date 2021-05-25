@@ -2,7 +2,7 @@
 
 import { userConstants } from '../constants/userConstants.js'
 
-export default (users = {}, action) => {
+export default (users = [], action) => {
   switch (action.type) {
     case userConstants.REGISTER:
       return {

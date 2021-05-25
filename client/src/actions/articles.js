@@ -9,4 +9,5 @@ export const getArticles = () => async (dispatch) => {
     dispatch({ type: articleTypes.FETCH_ALL, payload: data })
     console.log(data)
   } catch (err) {}
+  return <></>
 }
