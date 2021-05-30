@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom'
 import Login from '../pages/Login'
 import Home from '../pages/Home'
 import Register from '../pages/Register'
+import Submit from '../pages/Submit'
 // Import bootstrap components
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
@@ -18,12 +19,16 @@ function NavBar() {
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/Login">Login</Nav.Link>
           <Nav.Link href="/Register">Register</Nav.Link>
+          <Nav.Link href="/Submit">Submit</Nav.Link>
+
         </Nav>
       </Navbar>
 
       <Route exact path="/" component={Home} />
       <Route exact path="/Login" component={Login} />
       <Route exact path="/Register" component={Register} />
+      <Route exact path="/Submit" component={Submit} />
+
     </>
   )
 }
