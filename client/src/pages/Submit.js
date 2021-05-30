@@ -2,10 +2,10 @@ import React, { useState } from "react"
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
-import { NameInput, EmailInput } from '../components/InputForms'
-
-
-
+import { EmailInput } from '../components/InputForms'
+import { Route } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
+import SubmissionReceived from '../pages/SubmissionReceived'
 
 export default function Submit() {
     const [name, setName] = useState("")
@@ -18,7 +18,7 @@ export default function Submit() {
         <h4 className="float-left">Submit an Article!</h4>
 
         <Card style={{ width: '18rem', border: 0 }} className="mx-auto">
-          <p>Enter the email you wish to receive updates on the status of your article to:</p>
+          <span>Corrrespondance regarding the status of your article will be sent to this address:</span>
           <EmailInput />
           <form>
               <p></p>
@@ -31,13 +31,17 @@ export default function Submit() {
               <input type="text"
         placeholder="Year"/>
               <p></p>
+              <input type="text"
+        placeholder="Additional Details"/>
+              <p></p>
 
         <input type="file" />
       </form>
         <p></p>
-          <Button type="submit">
-            Submit Article
-          </Button>
+
+        <Button type="submit" href="../SubmissionReceived">Submit Article</Button>
+        <p></p>
+
           {/* Make an alert on submission. You will receive an email when the SEEDS team has moderated your article and deemed it accepted or rejected. */}
           <span></span>
         </Card>

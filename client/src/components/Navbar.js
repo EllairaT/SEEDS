@@ -5,6 +5,7 @@ import Login from '../pages/Login'
 import Home from '../pages/Home'
 import Register from '../pages/Register'
 import Submit from '../pages/Submit'
+import SubmissionReceived from '../pages/SubmissionReceived'
 // Import bootstrap components
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
@@ -28,6 +29,7 @@ function NavBar() {
       <Route exact path="/Login" component={Login} />
       <Route exact path="/Register" component={Register} />
       <Route exact path="/Submit" component={Submit} />
+      <Route exact path="/SubmissionReceived" component={SubmissionReceived} />
 
     </>
   )
