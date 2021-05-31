@@ -18,7 +18,7 @@ export default function Submit() {
         <h4 className="float-left">Submit an Article!</h4>
 
         <Card style={{ width: '18rem', border: 0 }} className="mx-auto">
-          <span>Corrrespondance regarding the status of your article will be sent to this address:</span>
+          <span>Updates regarding the status of your article will be sent to this address:</span>
           <EmailInput />
           <form>
               <p></p>

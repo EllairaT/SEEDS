@@ -126,3 +126,27 @@ export function DateInput(props) {
   )
 }
 //TODO: other inputs
+
+//SE Practise search
+export function SEPInput(props) {
+  const [SEP, setSEP] = useState('')
+  const onChange = (event) => setSEP(event.target.value)
+
+  const onKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      console.log('Enter was pressed!')
+      event.preventDefault()
+    }
+  }
+  return (
+    <Form.Control
+      type="search"
+      value={SEP}
+      ref={props.ref}
+      placeholder="Software Engineering Practise, e.g TDD"
+      onChange={onChange}
+      onKeyDown={onKeyDown}
+      className="mt-3 mb-3"
+    />
+  )
+}
