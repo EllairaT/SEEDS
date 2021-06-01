@@ -10,6 +10,7 @@ import SubmissionReceived from '../pages/SubmissionReceived'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 
+
 function NavBar() {
   return (
     <>
@@ -21,8 +22,7 @@ function NavBar() {
           <Nav.Link href="/Login">Login</Nav.Link>
           <Nav.Link href="/Register">Register</Nav.Link>
           <Nav.Link href="/Submit">Submit</Nav.Link>
-
-        </Nav>
+          </Nav>
       </Navbar>
 
       <Route exact path="/" component={Home} />

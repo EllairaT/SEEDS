@@ -19,23 +19,33 @@ export default function Submit() {
 
         <Card style={{ width: '18rem', border: 0 }} className="mx-auto">
           <span>Updates regarding the status of your article will be sent to this address:</span>
-          <EmailInput />
+          <EmailInput/>
+          <span>Leave the fields blank if the file contains the relevant information.</span>
           <form>
               <p></p>
         <input type="text"
+        className="form-control mt-3 mb-3"
         placeholder="Article title"/>
               <p></p>
         <input type="text"
+        className="form-control mt-3 mb-3"
         placeholder="Author(s)"/>
               <p></p>
               <input type="text"
+              className="form-control mt-3 mb-3"
         placeholder="Year"/>
               <p></p>
               <input type="text"
+              className="form-control mt-3 mb-3"
+        placeholder="SE Practise, e.g TDD"/>
+              <p></p>
+              <input type="text"
+              className="form-control mt-3 mb-3"
         placeholder="Additional Details"/>
               <p></p>
 
-        <input type="file" />
+        <input type="file"
+        className="form-control" />
       </form>
         <p></p>
 
