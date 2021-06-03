@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form'
-
+import FormControl from 'react-bootstrap/FormControl'
+import FormGroup from 'react-bootstrap/FormGroup'
 //handling submits should be done in the file where the <Form> tag is.
 
 // Name input
@@ -129,25 +130,33 @@ export function DateInput(props) {
 
 //SE Practise search
 export function SEPInput(props) {
-  const [SEP, setSEP] = useState('')
-  const onChange = (event) => setSEP(event.target.value)
+  const [SEP, setSEP] = useState('SE Method')
 
-  const onKeyDown = (event) => {
-    if (event.key === 'Enter') {
-      console.log('Enter was pressed!')
-      event.preventDefault()
-    }
-  }
+  const onChange = (event) => setSEP(event.target.value)
+  // const onKeyDown = (event) => {
+  //   if (event.key === 'Enter') {
+  //     console.log('Enter was pressed!')
+  //     event.preventDefault()
+  //   }
+  // }
   return (
-    <Form.Control
-      type="search"
-      value={SEP}
-      ref={props.ref}
-      placeholder="Software Engineering Practise, e.g TDD"
-      onChange={onChange}
-      onKeyDown={onKeyDown}
-      className="mt-3 mb-3"
-    />
+
+    <Form.Group controlId="SEForm.SelectCustom">
+      <Form.Control as="select" rows={8} onChange={onChange} className="mt-3 mb-3" >
+        <option disabled>SE Method</option>
+        <option>Unit Testing</option>
+        <option>Continuous Integration</option>
+        <option>Collective Code Ownership </option>
+        <option>Refactoring </option>
+        <option>Test Driven Development</option>
+        <option>Automated Acceptance Testing </option>
+        <option>Chaos Engineering</option>
+        <option>Continuous Deployment</option>
+      </Form.Control>
+    </Form.Group >
+
   )
 }
+
+
 

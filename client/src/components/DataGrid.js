@@ -22,7 +22,7 @@ const DataGridTest = (props) => {
   //set initial states 
   const [gridRef, setGridRef] = useState(null);
   const [searchText, setSearchText] = useState('')
-  const [dataSource, setDataSource] = useState(articleRows);
+  const [dataSource, setDataSource] = useState([]);
 
   //making an object that holds the current search text as its current property
   const searchRef = useRef(searchText)
