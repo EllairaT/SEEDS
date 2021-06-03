@@ -102,7 +102,7 @@ export function ArticleInput(props) {
   )
 }
 
-// Keyword input article (searches table for input)
+//Date input
 export function DateInput(props) {
   const [date, setDate] = useState('')
   const onChange = (event) => setDate(event.target.value)
@@ -118,7 +118,7 @@ export function DateInput(props) {
       type="date"
       value={date}
       ref={props.ref}
-      placeholder="Author, Title, etc..."
+      placeholder=""
       onChange={onChange}
       onKeyDown={onKeyDown}
       className="mt-3 mb-3"
