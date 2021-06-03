@@ -29,6 +29,9 @@ function Home() {
           <Col>
             <DateInput />
           </Col>
+          <Col>
+            <DateInput />
+          </Col>
         </Row>
         {/* <DisplayArticles /> */}
         <br />
