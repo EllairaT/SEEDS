@@ -39,7 +39,7 @@ export class Google extends Component {
     } else {
       googleCont = (
         <GoogleLogin
-          clientId="957975470640-c8nifvp8u0n99122n016hrmt04s0n1gt.apps.googleusercontent.com"
+          clientId={process.GOOGLE_ID}
           buttonText="Login with Google"
           onSuccess={this.responseGoogle}
           onFailure={this.responseGoogle}

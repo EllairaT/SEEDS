@@ -1,3 +1,4 @@
+
 const fs = require('fs')
 
 function parseBibToJSON(file) {
@@ -10,3 +11,4 @@ function parseBibToJSON(file) {
 function saveAsJSON(file) {
   fs.writeFileSync('tdd-data.json', JSON.stringify(parseBibToJSON(file)))
 }
+
