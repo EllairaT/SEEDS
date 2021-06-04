@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Facebook from '../components/Facebook'
 import Google from '../components/Google'
-import { EmailInput, PasswordInput } from '../components/InputForms'
+import { Input } from '../components/InputForms'
 import Container from 'react-bootstrap/Container'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
@@ -29,9 +29,9 @@ function Login() {
         <h4 className="float-left">Login</h4>
 
         <Card style={{ width: '18rem', border: 0 }} className="mx-auto">
-          <EmailInput />
-          <PasswordInput />
-          
+          <Input type="email" placeholder="example@email.com" />
+          <Input type="password" placeholder="password" />
+
 
           <Button type="submit" onClick={handleSubmit}>
             Log in

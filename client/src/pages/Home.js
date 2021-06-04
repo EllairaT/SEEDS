@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import DisplayArticles from '../components/DisplayArticles'
 import { getArticles } from '../actions/articles.js'
-import { ArticleInput, DateInput, SEPInput } from '../components/InputForms'
+import { Input } from '../components/InputForms'
 import DataGridTest from '../components/DataGrid'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -21,16 +21,17 @@ function Home() {
       <Container>
         <Row>
           <Col>
-            <ArticleInput />
+            <Input type="text" placeholder="Article title" />
           </Col>
           <Col>
-            <SEPInput />
+            <Input type="select" />
+
           </Col>
           <Col>
-            <DateInput />
+            <Input type="date" />
           </Col>
           <Col>
-            <DateInput />
+            <Input type="date" />
           </Col>
         </Row>
         {/* <DisplayArticles /> */}

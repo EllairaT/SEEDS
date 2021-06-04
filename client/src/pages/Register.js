@@ -1,5 +1,5 @@
 import React, { useState, setState } from 'react'
-import { NameInput, EmailInput, PasswordInput } from '../components/InputForms'
+import { Input } from '../components/InputForms'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
@@ -36,9 +36,9 @@ function Register() {
       <Container className="p-5">
         <Card style={{ width: '20rem', border: 0 }} className="mx-auto">
           <Form onSubmit={handleSubmit}>
-            <NameInput onChange={handleChange} value={user.name} />
-            <EmailInput />
-            <PasswordInput />
+            <Input type="text" onChange={handleChange} placeholder="Name" />
+            <Input type="email" placeholder="example@email.com" />
+            <Input type="password" placeholder="password" />
             <Button className="mt-3 mb-3" style={{ width: '100%' }}>
               Register
             </Button>

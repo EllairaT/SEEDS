@@ -72,25 +72,6 @@ const DataGridTest = (props) => {
     { name: 'journal', header: 'Journal', defaultFlex: 1 }
   ]
 
-  // //store the initial state of the columns
-  // const [cols] = useState(columns)
-
-  // const onSearch = ({ target: { value } }) => {
-  //   const visibleCols = gridRef.current.visibleCols
-  //   const lowerText = value && value.toLowerCase()
-  //   const newResults = articles.filter((a) => {
-  //     return visibleCols.reduce((acc, col) => {
-  //       const v = (a[col.author] + '').toLowerCase()
-  //       return acc || v.indexOf(lowerText) !== -1
-  //     }, false)
-
-
-  //   })
-  //   setSearchText(value)
-  //   setDataSource(newResults)
-  // }
-
-
   articles.forEach((a) => {
     var authorCol = a.AUTHOR ? a.AUTHOR : 'none'
     var year = a.YEAR ? a.YEAR : 'unknown'
