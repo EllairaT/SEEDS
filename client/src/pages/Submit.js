@@ -4,10 +4,7 @@ import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import Form from 'react-bootstrap/Form'
 import { Input } from '../components/InputForms'
-import { Route } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
-import { Redirect } from 'react-router-dom'
-import SubmissionReceived from '../pages/SubmissionReceived'
+
 
 export default function Submit() {
       const [name, setName] = useState("")

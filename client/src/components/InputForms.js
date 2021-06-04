@@ -1,14 +1,11 @@
 import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form'
-import FormControl from 'react-bootstrap/FormControl'
-import FormGroup from 'react-bootstrap/FormGroup'
 //handling submits should be done in the file where the <Form> tag is.
 
 // Name input
 export function Input(props) {
   //useState returns an array. first item is current value, second val is the value to set it to
   const [input, setInput] = useState('')
-  const onChange = (event) => setInput(event.target.value)
 
   const onKeyDown = (event) => {
     if (event.key === 'Enter') {
