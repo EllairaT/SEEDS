@@ -1,8 +1,8 @@
-import { FacebookLogin } from 'react-facebook-login/dist/facebook-login-render-props'
-import Facebook from '../components/Facebook'
-import { mount, shallow } from 'enzyme'
-import Button from 'react-bootstrap/Button'
-jest.mock('../components/Facebook')
+// import { FacebookLogin } from 'react-facebook-login/dist/facebook-login-render-props'
+// import Facebook from '../components/Facebook'
+// import { mount, shallow } from 'enzyme'
+// import Button from 'react-bootstrap/Button'
+// jest.mock('../components/Facebook')
 
 // beforeEach(() => {
 //   Facebook.mockClear()
